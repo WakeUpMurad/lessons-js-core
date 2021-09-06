@@ -1,0 +1,146 @@
+body,
+html {
+	width: 100%;
+	background: rgb(0,255,250);
+	background: linear-gradient(15deg, rgba(0,255,250,0.1) 0%, rgba(217,255,142,0.2) 37%, rgba(214,255,154,0.3) 57%, rgba(0,184,63,0.3) 91%);
+	font-size: 16px;
+	color: #000;
+	height: 100%;
+	min-height: 100%;
+}
+.person {
+	display: flex;
+	flex-direction: column;
+
+	
+}
+.person__info {
+	display: flex;
+	justify-content: center;
+}
+.person__contacts {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.person__details {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.avatar {
+	margin-top: 32px;
+	margin-bottom: 32px;
+	margin-right: 32px;
+	display: flex;
+	justify-content: center;
+}
+.avatar__picture {
+	background: url(avatar.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	border: 25px
+	solid #fff;
+  }
+.avatar__picture:hover{
+	-webkit-animation: pulsing 2s infinite;
+	animation: pulsing 2s infinite;
+}
+
+  @-webkit-keyframes pulsing {
+	0% {
+	  -webkit-transform: scale(0.5, 0.5);
+	  transform: scale(0.5, 0.5)
+	}
+	50% {
+	  -webkit-transform: scale(1.0, 1.0);
+	  transform: scale(1.0, 1.0);
+	}
+	100% {
+	  -webkit-transform: scale(0.5, 0.5);
+	  transform: scale(0.5, 0.5);
+	}
+  }
+  
+  @keyframes pulsing {
+	0% {
+	  -webkit-transform: scale(0.5, 0.5);
+	  transform: scale(0.5, 0.5)
+	}
+	50% {
+	  -webkit-transform: scale(1.0, 1.0);
+	  transform: scale(1.0, 1.0);
+	}
+	100% {
+	  -webkit-transform: scale(0.5, 0.5);
+	  transform: scale(0.5, 0.5);
+	}
+}
+.contacts {
+	flex-direction: column;
+	justify-content: center;
+}
+.contacts__name {
+	font-weight: bold;
+	font-size: 32px;
+}
+.contacts__role {
+	font-weight: bold;
+	font-size: 19px;
+	margin-bottom: 32px;
+}
+.contacts__item {
+	font-style: italic;
+}
+.contacts__title {
+	font-weight: bold;
+}
+.contacts__title:after {
+	content: ":";
+}
+.contacts__link {
+	color: gray;
+	border-color: #000;
+}
+.contacts__link:hover {
+	color: blue;
+}
+.paragraph {
+	margin: 16px 0;
+	max-width: 50%;
+}
+.paragraph_last {
+	margin-bottom: 48px;
+}
+
+@media (min-width: 1200px) {
+    .person__details {
+        max-width: 1200px;
+    }
+}
+@media (max-width: 992px) {
+    .person__details {
+        max-width: none;
+    }
+}
+@media (max-width: 767px) {
+    .person__details {
+        max-width: none;
+    }
+	.person__info {
+		flex-direction: column;
+
+	}
+	.contacts{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+}
+@media (max-width: 375px) {
+    .person {
+        max-width: none;
+    }
+}
