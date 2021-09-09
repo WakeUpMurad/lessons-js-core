@@ -41,7 +41,7 @@ html {
     justify-content: center;
 }
 .avatar__picture {
-    background: url(img/avatar.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+    background: url(img/avatar.jpg) 50% 50% no-repeat; /
     max-width: 350px;
     border-radius: 50%;
     border: 25px
