@@ -46,9 +46,11 @@ html {
     border: 25px
     solid #fff;
     margin: 30px 0;
-
+    transition: transform 2s;
 }
 .avatar__picture:hover {
+    transform: rotateZ(180deg);
+    transition: transform 2s ease;
 }
 
 .contacts {
