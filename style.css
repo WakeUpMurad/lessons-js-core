@@ -1,32 +1,57 @@
-body,
-html {
+body {
     width: 100%;
     background: rgb(0,255,250);
     background: linear-gradient(15deg, rgba(0,255,250,0.1) 0%, rgba(217,255,142,0.2) 37%, rgba(214,255,154,0.3) 57%, rgba(0,184,63,0.3) 91%);
     font-size: 16px;
-    color: #000;
+    /*color: #000;*/
     height: 100%;
     min-height: 100%;
+    /*background: rgb(20,20,20);*/
+    overflow: hidden;
+    margin: 50% 0 0 0;
+    position: relative;
+}
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    /*background: linear-gradient(180deg, rgba(20,20,20,1) 40%, rgba(20,20,20,0) 100%);*/
 }
 .person {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 60%;
+    transition: 1s;
+    height: 100%;
+    width: 100%;
     margin: auto;
-
+    perspective: 450px;
+}
+.scroll-body {
+    color: #ffc909;
+    font-size: 3vw;
+    line-height: 1.5em;
+    font-weight: bold;
+    text-align: justify;
+    position: relative;
+    animation: scroll 60s linear forwards;
+}
+@keyframes scroll {
+    from { top: 0; transform: translateZ(0) rotateX(20deg); }
+    to { top: -7500px; transform: translateZ(-2500px) rotateX(21deg); }
 }
 .person__info {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
-
+    margin-bottom: 32px;
 }
 .person__contacts {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 8px;
 }
 .person__details {
     margin: auto;
@@ -37,14 +62,14 @@ html {
 .avatar {
     display: flex;
     justify-content: center;
-    padding: 0 10px;
+    padding: 0 8px;
 }
 .avatar__picture {
     width: 350px;
     border-radius: 50%;
     border: 25px
     solid #fff;
-    margin: 30px 0;
+    margin: 32px 0;
     z-index: 10;
     transition: transform 2s;
 }
@@ -52,11 +77,10 @@ html {
     transform: translateX(100%) rotate(360deg);
     transition: transform 2s ease;
 }
-
 .contacts {
     flex-direction: column;
     justify-content: center;
-    padding: 0 10px;
+    padding: 0 8px;
 }
 .contacts__name {
     font-weight: bold;
@@ -84,43 +108,43 @@ html {
     color: blue;
 }
 .paragraph {
-    margin: 0 0 15px 0;
-    max-width: 700px;
-    padding: 0 18px;
+    margin: 0 0 16px 0;
+    padding: 0 16px;
 }
 .paragraph_last {
     margin-bottom: 32px;
 }
 
-@media (min-width: 1200px) {
-    .person__details {
-        max-width: 1200px;
-    }
-}
-@media (max-width: 992px) {
-    .person__details {
-        max-width: none;
-    }
-}
-@media (max-width: 767px) {
-    .person__details {
-        max-width: none;
-    }
-    .person__info {
-        flex-direction: column;
+/*@media (min-width: 1200px) {*/
+/*    .person__details {*/
+/*        max-width: 1100px;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 992px) {*/
+/*    .person__details {*/
+/*        max-width: 900px;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 767px) {*/
+/*    .person__details {*/
+/*        max-width: 700px;*/
+/*    }*/
+/*    .person__info {*/
+/*        flex-direction: column;*/
 
-    }
-    .contacts{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-}
-@media (max-width: 375px) {
-    .person {
-        max-width: none;
-    }
-    .contacts__name {
-        text-align: center ;
-    }
-}
+/*    }*/
+/*    .contacts{*/
+/*        display: flex;*/
+/*        align-items: center;*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 375px) {*/
+/*    .person {*/
+/*        max-width: 350px;*/
+/*    }*/
+/*    .contacts__name {*/
+/*        text-align: center ;*/
+/*    }*/
+/*}*/
+
